@@ -75,7 +75,7 @@ namespace ProyectoWeb
                 imageFoto.Visible = false;
             }
 
-            if (!Seguridades.esAdmin(Session["usuario"]))
+            if (!Seguridad.esAdmin(Session["usuario"]))
             {
                 tbCodigo.Enabled = false;
                 tbDescripcion.Enabled = false;

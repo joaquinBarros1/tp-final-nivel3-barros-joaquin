@@ -7,7 +7,7 @@ using dominio;
 
 namespace AccesoDatos
 {
-    public class Seguridades
+    public class Seguridad
     {
         public static bool sesionActiva(object user)
         {

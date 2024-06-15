@@ -15,7 +15,7 @@ namespace ProyectoWeb
         {
             if(!(Page is Login || Page is Registro || Page is Error || Page is _default || Page is Nosotros))
             {
-                if (!Seguridades.sesionActiva(Session["usuario"]))
+                if (!Seguridad.sesionActiva(Session["usuario"]))
                     Response.Redirect("Login.aspx", false);
             }
 
@@ -24,7 +24,7 @@ namespace ProyectoWeb
                 bodyMaster.Attributes.Add("class", "bg-dark");
             }
 
-            if (Seguridades.sesionActiva(Session["usuario"]) &&  !(string.IsNullOrEmpty(((Usuario)Session["usuario"]).ImagenPerfil)))
+            if (Seguridad.sesionActiva(Session["usuario"]) &&  !(string.IsNullOrEmpty(((Usuario)Session["usuario"]).ImagenPerfil)))
             {
                 imgAvatar.ImageUrl = "~/images/" + ((Usuario)Session["usuario"]).ImagenPerfil + "?v=" + DateTime.Now.Ticks.ToString();
             }
