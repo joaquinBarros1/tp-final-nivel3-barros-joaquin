@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using dominio;
+using System.Configuration;
 
 namespace AccesoDatos
 {
@@ -21,7 +22,7 @@ namespace AccesoDatos
 
         public Datos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS01; database=CATALOGO_WEB_DB; integrated security=true");
+            conexion = new SqlConnection(ConfigurationManager.AppSettings["cadenaConexion"]);
             comando = new SqlCommand();
         }
 

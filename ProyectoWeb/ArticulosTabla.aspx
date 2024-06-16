@@ -114,7 +114,7 @@
                     <asp:CommandField HeaderText="Ver Detalle" ShowSelectButton="true" ControlStyle-CssClass="btn btn-warning" SelectText="Ver detalle" />
                 </Columns>
             </asp:GridView>
-            <%if (AccesoDatos.Seguridades.esAdmin(Session["usuario"]))
+            <%if (AccesoDatos.Seguridad.esAdmin(Session["usuario"]))
                 {%>
             <div>
                 <a href="AutoForm.aspx" class="btn btn-success">Agregar Artículo</a>
