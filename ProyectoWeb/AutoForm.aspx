@@ -51,7 +51,7 @@
                 <label for="tbPrecio" class="form-label">Precio</label>
                 <asp:TextBox runat="server" ID="tbPrecio" CssClass="form-control" />
                 <asp:RequiredFieldValidator ErrorMessage="* Campo obligatorio" CssClass="validar" ControlToValidate="tbPrecio" runat="server" />
-                <asp:RegularExpressionValidator ErrorMessage="* Únicamente caracteres númericos" CssClass="validar" ValidationExpression="^[0-9,]*$" ControlToValidate="tbPrecio" runat="server" />
+                <asp:RegularExpressionValidator ErrorMessage="* Únicamente caracteres númericos" CssClass="validar" ValidationExpression="^^[0-9.,]+$" ControlToValidate="tbPrecio" runat="server" />
             </div>
             <div class="mb-3">
                 <label for="ddlMarca" class="form-label">Marca</label>
